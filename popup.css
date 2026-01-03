@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #111827;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.popup-container {
+  background: #1f2937;
+  border-radius: 20px;
+  padding: 28px 24px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.popup-header .logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.popup-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.popup-header p {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+/* ===== INPUTS ===== */
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 46px;
+  border: 1px solid #374151;
+  border-radius: 10px;
+  background: #1f2937;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.6);
+  background: #111827;
+}
+
+/* Ícones nos inputs */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* ===== BOTÕES ===== */
+button {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.logout-btn {
+  background: #ef4444;
+  margin-top: 12px;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* ===== MENSAGENS ===== */
+.mensagem {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.mensagem.sucesso {
+  color: #22c55e;
+}
+
+.mensagem.erro {
+  color: #ef4444;
+}
+
+/* ===== TOGGLE DARK/LIGHT ===== */
+.theme-toggle {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.light {
+  background: #f9fafb;
+  color: #111;
+}
+
+.light .popup-container {
+  background: #fff;
+  color: #111;
+}
+
+.light .input-group input {
+  background: #f3f4f6;
+  color: #111;
+}
+
+.light button {
+  background: #3b82f6;
+}
+
+/* ===== LEMBRAR LOGIN ===== */
+.remember-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 18px 0;
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+/* ===== STATUS DO USUÁRIO LOGADO ===== */
+.status-section {
+  display: none;
+  margin-top: 15px;
+  padding: 14px;
+  background: #1e3a8a;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Header com avatar + ícones */
+.status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.status-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.status-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.status-icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: transform 0.2s;
+}
+
+.status-icons img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Nome e turma */
+.status-info {
+  line-height: 1.4;
+}
+
+.status-info strong {
+  font-size: 15px;
+}
+
+.status-info span {
+  display: block;
+  font-size: 13px;
+  color: #d1d5db;
+}

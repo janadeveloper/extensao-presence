@@ -1,0 +1,34 @@
+{
+  "name": "Extensão de Presença",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Detecta presença no Google Meet via reconhecimento facial",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "host_permissions": ["https://meet.google.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png",
+    "default_title": "Ativar reconhecimento facial"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "main.bundle.js",   
+        "popup.bundle.js",
+        "modelos/*",
+        "tf.min.js",
+        "face-api.min.js",
+        "src/firebase.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

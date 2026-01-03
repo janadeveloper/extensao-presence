@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Presence</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Botão dark/light -->
+    <div id="toggleIcon" class="theme-toggle">🌙</div>
+
+    <!-- Cabeçalho -->
+    <div class="popup-header">
+      <img src="icons/icon.png" alt="Logo" class="logo" />
+      <h1>Presence</h1>
+      <p id="popup-subtitle">Login para iniciar a chamada</p>
+    </div>
+
+    <!-- FORMULÁRIO DE LOGIN -->
+    <form id="loginForm">
+      <div class="input-group">
+        <img src="icons/user.png" class="input-icon" alt="icone email" />
+        <input type="email" id="email" placeholder="E-mail" required>
+      </div>
+
+      <div class="input-group">
+        <img src="icons/pass.png" class="input-icon" alt="icone senha" />
+        <input type="password" id="senha" placeholder="Senha" required>
+      </div>
+
+      <!-- lembrar-me -->
+      <div class="remember-group">
+        <input type="checkbox" id="rememberMe">
+        <label for="rememberMe">Lembrar-me</label>
+      </div>
+
+      <button type="submit">Entrar →</button>
+    </form>
+
+    <!-- STATUS DE SESSÃO ATIVA -->
+    <div id="statusBox" class="status-box" style="display:none;">
+      <div id="statusMsg">✅ Usuário conectado</div>
+      <button id="logoutBtn" class="logout-btn">Sair</button>
+    </div>
+
+    <!-- MENSAGEM DE FEEDBACK -->
+    <div id="mensagem" class="mensagem"></div>
+  </div>
+
+  <!-- Script bundle -->
+  <script src="popup.bundle.js"></script>
+</body>
+</html>
